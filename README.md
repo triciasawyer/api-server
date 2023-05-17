@@ -16,8 +16,6 @@ Creating
 
 ### Collaborators
 
-
-
 ### Setup
 
 .env requirements (where applicable)
