@@ -28,8 +28,6 @@ clone repo, npm i, then run nodemon in the terminal
 
 #### Routes
 
-GET : /success - specific route to hit
-GET : /bad - specific route
 GET : /person
 
 #### Tests
