@@ -16,7 +16,7 @@ Creating
 
 ### Collaborators
 
-Tim, and Ryan in review
+
 
 ### Setup
 
