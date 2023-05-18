@@ -3,8 +3,8 @@
 
 const supertest = require('supertest');
 const { app } = require('../src/server');
-const { sequelizeDb } = require('../src/models');
 const request = supertest(app);
+const { sequelizeDb } = require('../src/models');
 
 
 beforeAll(async() => {

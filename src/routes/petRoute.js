@@ -12,7 +12,7 @@ router.get('/pet', async (req, res, next) => {
 });
 
 router.get('/pet/:id', async (req, res, next) => {
-  let singlePet = await petModel.findAll({where: {id: req.params.id}});
+  let singlePet = await petModel.findByPk(req.params.id);
   res.status(200).send(singlePet);
 });
 
@@ -21,6 +21,16 @@ router.post('/pet', async (req, res, next) => {
   let newPet = await petModel.create(req.body);
   res.status(200).send(newPet);
 });
+
+
+// router.put('', async (req, res, next) => {
+//   let addPet = await petModel
+// });
+
+
+// router.delete('', async (req, res, next) => {
+//   let deletePet = await petModel
+// });
 
 
 module.exports = router;

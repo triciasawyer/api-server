@@ -12,7 +12,7 @@ router.get('/owner', async (req, res, next) => {
 });
 
 router.get('/owner/:id', async (req, res, next) => {
-  let singleOwner = await ownerModel.findAll({where: {id: req.params.id}});
+  let singleOwner = await ownerModel.findByPk(req.params.id);
   res.status(200).send(singleOwner);
 });
 
