@@ -22,3 +22,7 @@ const pet = (sequelizeDb, DataTypes) => {
 
 module.exports = pet;
 
+/*
+  export a schema for sequelize to use as a model.
+  Give the schema name, age, and type properties.
+*/

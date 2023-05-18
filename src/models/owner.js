@@ -1,8 +1,7 @@
-'use strict';
-
+"use strict";
 
 const owner = (sequelizeDb, DataTypes) => {
-  return sequelizeDb.define('owner', {
+  return sequelizeDb.define("owner", {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -15,11 +14,15 @@ const owner = (sequelizeDb, DataTypes) => {
 
     location: {
       type: DataTypes.ENUM,
-      values: ['Iowa', 'Texas', 'Kansas', 'Oregon', 'California'],
+      values: ["Iowa", "Texas", "Kansas", "Oregon", "California"],
       allowNull: true,
     },
   });
 };
 
-
 module.exports = owner;
+
+/*
+  export a schema for sequelize to use as a model.
+  Give the schema name, age, and location properties.
+*/
