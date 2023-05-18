@@ -33,3 +33,5 @@ GET : /person
 to run tests, after running `npm i`, run the command `npm test`
 
 #### UML
+
+![UML](./UML3.png)
