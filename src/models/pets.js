@@ -20,4 +20,4 @@ const pets = (sequelizeDb, DataTypes) => {
 };
 
 
-module.exports(pets);
+module.exports = pets;

@@ -22,4 +22,4 @@ const wildAnimals = (sequelizeDb, DataTypes) => {
 };
 
 
-module.exports(wildAnimals);
+module.exports = wildAnimals;
