@@ -26,12 +26,21 @@ clone repo, npm i, then run nodemon in the terminal
 
 #### Routes
 
-GET : /person
+GET : /pet
+GET : /pet/:id
+GET : /wildAnimal
+GET : /wildAnimal/:id
+POST : /pets
+POST : /wildAnimals
 
 #### Tests
 
 to run tests, after running `npm i`, run the command `npm test`
 
+#### Deployed version
+
+[Render deploy](https://api-server-prod-3588.onrender.com)
+
 #### UML
 
-![UML](./UML3.png)
+![UML](./assets/UML3.png)
