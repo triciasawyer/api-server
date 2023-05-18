@@ -11,7 +11,7 @@ const pets = (sequelizeDb, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
-    group: {
+    type: {
       type: DataTypes.ENUM,
       values: ['dog', 'cat', 'guinea pigs', 'hamsters', 'ferrets'],
       allowNull: true,

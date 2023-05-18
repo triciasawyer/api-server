@@ -13,7 +13,7 @@ const wildAnimals = (sequelizeDb, DataTypes) => {
       allowNull: true,
     },
 
-    group: {
+    animal: {
       type: DataTypes.ENUM,
       values: ['wolf', 'lion', 'tiger', 'elephant', 'giraffe'],
       allowNull: true,
