@@ -17,24 +17,24 @@ afterAll(async() => {
 });
 
 
-describe('Pet routes', () => {
-  test('create a pet', async() => {
-    let response = await request.post('./pets').send ({
+describe('Owner routes', () => {
+  test('create an owner', async() => {
+    let response = await request.post('./owner').send ({
       name: 'Test',
-      age: 6,
-      type: 'dog',
+      age: 25,
+      location: 'Texas',
     });
 
     expect(response.status).toEqual(200);
     expect(response.body.name).toEqual('Test');
-    expect(response.body.age).toEqual(6);
+    expect(response.body.age).toEqual(25);
   });
 
-  test('gets all pets', async() => {
-    let response = await request.get('./pets');
+  test('gets all owners', async() => {
+    let response = await request.get('./owner');
 
     expect(response.status).toEqual(200);
     expect(response.body[0].name).toEqual('Test');
-    expect(response.body[0].age).toEqual(42);
+    expect(response.body[0].age).toEqual(25);
   });
 });

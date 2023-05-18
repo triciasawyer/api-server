@@ -19,7 +19,7 @@ afterAll(async() => {
 
 describe('Pet routes', () => {
   test('create a pet', async() => {
-    let response = await request.post('./pets').send ({
+    let response = await request.post('./pet').send ({
       name: 'Test',
       age: 6,
       type: 'dog',
@@ -31,10 +31,10 @@ describe('Pet routes', () => {
   });
 
   test('gets all pets', async() => {
-    let response = await request.get('./pets');
+    let response = await request.get('./pet');
 
     expect(response.status).toEqual(200);
     expect(response.body[0].name).toEqual('Test');
-    expect(response.body[0].age).toEqual(42);
+    expect(response.body[0].age).toEqual(6);
   });
 });

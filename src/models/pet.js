@@ -1,8 +1,8 @@
 'use strict';
 
 
-const pets = (sequelizeDb, DataTypes) => {
-  return sequelizeDb.define('pets', {
+const pet = (sequelizeDb, DataTypes) => {
+  return sequelizeDb.define('pet', {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -13,11 +13,12 @@ const pets = (sequelizeDb, DataTypes) => {
     },
     type: {
       type: DataTypes.ENUM,
-      values: ['dog', 'cat', 'guinea pigs', 'hamsters', 'ferrets'],
+      values: ['dog', 'cat', 'guinea pig', 'hamster', 'bird'],
       allowNull: true,
     },
   });
 };
 
 
-module.exports = pets;
+module.exports = pet;
+

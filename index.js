@@ -12,5 +12,6 @@ sequelizeDb.sync()
   .then(() => {
     console.log('Successful connection!');
     start(PORT);
-  });
+  })
+  .catch(err => console.error(err));
 

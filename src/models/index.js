@@ -1,8 +1,8 @@
 'use strict';
 
 const { Sequelize, DataTypes } = require('sequelize');
-const pets = require('./pets');
-const wildAnimals = require('./wildAnimals');
+const pet = require('./pet');
+const owner = require('./owner');
 
 const DATABASE_URL = process.env.NODE_ENV === 'test' ? 'sqlite::memory:' : process.env.DATABASE_URL;
 
@@ -10,7 +10,7 @@ const DATABASE_URL = process.env.NODE_ENV === 'test' ? 'sqlite::memory:' : proce
 const sequelizeDb = new Sequelize(DATABASE_URL);
 
 // create our working and connected pet database model
-const petModel = pets(this.sequelizeDb, DataTypes);
-const wildAnimalModel = wildAnimals(this.sequelizeDb, DataTypes);
+const petModel = pet(sequelizeDb, DataTypes);
+const ownerModel = owner(sequelizeDb, DataTypes);
 
-module.exports = {sequelizeDb, petModel, wildAnimalModel};
+module.exports = {sequelizeDb, petModel, ownerModel};

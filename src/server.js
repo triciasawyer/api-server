@@ -3,7 +3,7 @@
 
 const express = require('express');
 const cors = require('cors');
-const wildAnimalRouter = require('./routes/wildRoute');
+const ownerRouter = require('./routes/ownerRoute');
 const petRouter = require('./routes/petRoute');
 const errorHandler = require('./error-handlers/500.js');
 const notFound = require('./error-handlers/404.js');
@@ -14,7 +14,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use(wildAnimalRouter);
+app.use(ownerRouter);
 app.use(petRouter);
 
 
