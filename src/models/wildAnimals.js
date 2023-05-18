@@ -3,19 +3,20 @@
 
 const wildAnimals = (sequelizeDb, DataTypes) => {
   return sequelizeDb.define('animals', {
-    name: {
+    age: {
       type: DataTypes.STRING,
       allowNull: false,
     },
 
-    age: {
+    animal: {
       type: DataTypes.INTEGER,
+      values: ['wolf', 'lion', 'tiger', 'elephant', 'giraffe'],
       allowNull: true,
     },
 
-    animal: {
+    type: {
       type: DataTypes.ENUM,
-      values: ['wolf', 'lion', 'tiger', 'elephant', 'giraffe'],
+      values: ['fish', 'reptile', 'mammal', 'bird', 'amphibian'],
       allowNull: true,
     },
   });
