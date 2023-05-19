@@ -1,2 +1,5 @@
 # api-server
-Lab 3
+
+## UML
+
+![Lab 4](./Lab4-UML.png)
