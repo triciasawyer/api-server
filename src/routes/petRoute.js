@@ -31,12 +31,23 @@ router.put('/pet/:id', async (req, res, next) => {
 });
 
 
-router.delete('/pet/:id', async (req, res, next) => {
-  await petModel.update(req.body, { where: {id: req.params.id} });
+// router.delete('/pet/:id', async (req, res, next) => {
+//   await petModel.update(req.body, { where: {id: req.params.id} });
 
-  const deletePet = await petModel.findByPk(req.params.id);
-  res.status(200).send(deletePet);
-});
+//   const deletePet = await petModel.findByPk(req.params.id);
+//   res.status(200).send(deletePet);
+// });
 
+
+// router.delete('/pet/:id', async (req, res, next) => {
+//   try{
+//     let{id}=req.params;
+
+//     let deletePet = await petModel.destroy(id);
+//     res.status(200).send(deletePet);
+//   }catch(err){
+//     next(err.message);
+//   }
+// });
 
 module.exports = router;

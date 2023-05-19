@@ -57,5 +57,14 @@ describe('Pet route', () => {
     expect(response.body.age).toEqual(6);
   });
 
-  
+
+  // test('delete pet route', async () => {
+  //   const response = await request.delete('/pet/1');
+
+  //   expect(response.status).toEqual(200);
+  //   expect(response.body.name).toEqual('Test');
+  //   expect(response.body.age).toEqual(6);
+  // });
+
+
 });
