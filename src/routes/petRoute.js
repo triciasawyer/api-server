@@ -35,8 +35,10 @@ router.delete('/pet/:id', async (req, res, next) => {
   const id = parseInt(req.params.id);
 
   try {
-    let deletedPet = await petModel.destroy({where: {id}});
-    res.status(200).json(deletedPet);
+    let deletedPetResponse = await petModel.findByPk(req.params.id);
+
+    await petModel.destroy({where: {id}});
+    res.status(200).json(deletedPetResponse);
   } catch (err) {
     next(err);
   }

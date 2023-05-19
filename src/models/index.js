@@ -4,7 +4,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 const pet = require('./pet');
 const owner = require('./owner');
 
-const DATABASE_URL = process.env.NODE_ENV === 'test' ? 'sqlite:memory:' : process.env.DATABASE_URL;
+const DATABASE_URL = process.env.NODE_ENV === 'test' ? 'sqlite::memory:' : process.env.DATABASE_URL;
 
 // db singleton
 const sequelizeDb = new Sequelize(DATABASE_URL);
