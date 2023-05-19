@@ -26,12 +26,17 @@ clone repo, npm i, then run nodemon in the terminal
 
 #### Routes
 
+404 bad route : /foo
 GET : /pet
 GET : /pet/:id
-GET : /wildAnimal
-GET : /wildAnimal/:id
-POST : /pets
-POST : /wildAnimals
+GET : /owner
+GET : /owner/:id
+POST : /pet
+POST : /owner
+PUT : /owner/:id
+PUT : /pet/:id
+DELETE : /owner/:id
+DELETE : /owner/:id
 
 #### Tests
 
