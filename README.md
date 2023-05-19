@@ -16,6 +16,8 @@ Creating
 
 ### Collaborators
 
+Got help from a TA, Tony in lab 3
+
 ### Setup
 
 .env requirements (where applicable)
