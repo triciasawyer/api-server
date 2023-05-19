@@ -32,14 +32,17 @@ router.put('/owner/:id', async (req, res, next) => {
 });
 
 
-// router.delete('/owner/:id', async (req, res, next) => {
-//   try {
-//     const deletedOwner = await ownerModel.delete(req.params.id);
-//     res.status(200).send(deletedOwner);
-//   } catch (err) {
-//     next(err);
-//   }
-// });
+router.delete('/owner/:id', async (req, res, next) => {
+  const id = parseInt(req.params.id);
+
+  try {
+    let deletedOwner = await ownerModel.destroy({where: {id}});
+    res.status(200).json(deletedOwner);
+  } catch (err) {
+    next(err);
+  }
+});
+
 
 
 

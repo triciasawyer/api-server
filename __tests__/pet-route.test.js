@@ -58,13 +58,12 @@ describe('Pet route', () => {
   });
 
 
-  // test('delete pet route', async () => {
-  //   const response = await request.delete('/pet/1');
+  test('Delete a pet', async () => {
+    const response = await request.get('/pet/1');
 
-  //   expect(response.status).toEqual(200);
-  //   expect(response.body.name).toEqual('Test');
-  //   expect(response.body.age).toEqual(6);
-  // });
-
+    expect(response.status).toEqual(200);
+    expect(response.body[0].name).toEqual('Test');
+    expect(response.body[0].age).toEqual(6);
+  });
 
 });
