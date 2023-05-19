@@ -44,7 +44,7 @@ to run tests, after running `npm i`, run the command `npm test`
 
 #### Deployed version
 
-[Render deploy](./assets/UML3.png)
+[Render deploy](https://api-server-prod-3588.onrender.com)
 
 #### PR
 
