@@ -19,7 +19,7 @@ afterAll(async() => {
 
 describe('Owner route', () => {
   test('create an owner route', async() => {
-    let response = await request.post('./owner').send ({
+    let response = await request.post('./ownerRoute').send ({
       name: 'Test',
       age: 25,
       location: 'Texas',
