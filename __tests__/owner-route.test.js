@@ -67,4 +67,11 @@ describe('Owner route', () => {
   });
 
 
+  test('invalid requests', async () => {
+    const response = await request.get('/foo');
+
+    expect(response.status).toEqual(404);
+  });
+
+
 });

@@ -66,4 +66,12 @@ describe('Pet route', () => {
     expect(response.body[0].age).toEqual(6);
   });
 
+
+  test('invalid requests', async () => {
+    const response = await request.get('/foo');
+
+    expect(response.status).toEqual(404);
+  });
+
+
 });
