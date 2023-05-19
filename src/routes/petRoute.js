@@ -3,7 +3,7 @@
 
 const express = require('express');
 const router = express.Router();
-const { petModel } = require('../models/pet');
+const { petModel } = require('../models');
 
 
 router.get('/pet', async (req, res, next) => {
@@ -12,7 +12,7 @@ router.get('/pet', async (req, res, next) => {
 });
 
 router.get('/pet/:id', async (req, res, next) => {
-  let singlePet = await petModel.findByPk(req.params.id);
+  let singlePet = await petModel.findAll({where: {id:req.params.id}});
   res.status(200).send(singlePet);
 });
 
@@ -23,14 +23,22 @@ router.post('/pet', async (req, res, next) => {
 });
 
 
-// router.put('', async (req, res, next) => {
-//   let addPet = await petModel
-// });
+router.put('./pet/:id', async (req, res, next) => {
+  await petModel.update(req.body, { where: {id: req.params.id} });
+
+  const updatePet = await petModel.findByPk(req.params.id);
+  res.status(200).send(updatePet);
+});
 
 
-// router.delete('', async (req, res, next) => {
-//   let deletePet = await petModel
-// });
+router.delete('./pet/:id', async (req, res, next) => {
+  try {
+    const deletedPet = await petModel.destroy ({ where: { id: req.params.id} });
+    res.status(200).send(deletedPet);
+  } catch (err) {
+    next(err);
+  }
+});
 
 
 module.exports = router;
