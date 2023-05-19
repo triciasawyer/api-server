@@ -23,7 +23,7 @@ router.post('/pet', async (req, res, next) => {
 });
 
 
-router.put('./pet/:id', async (req, res, next) => {
+router.put('/pet/:id', async (req, res, next) => {
   await petModel.update(req.body, { where: {id: req.params.id} });
 
   const updatePet = await petModel.findByPk(req.params.id);
@@ -31,13 +31,11 @@ router.put('./pet/:id', async (req, res, next) => {
 });
 
 
-router.delete('./pet/:id', async (req, res, next) => {
-  try {
-    const deletedPet = await petModel.destroy ({ where: { id: req.params.id} });
-    res.status(200).send(deletedPet);
-  } catch (err) {
-    next(err);
-  }
+router.delete('/pet/:id', async (req, res, next) => {
+  await petModel.update(req.body, { where: {id: req.params.id} });
+
+  const deletePet = await petModel.findByPk(req.params.id);
+  res.status(200).send(deletePet);
 });
 
 

@@ -24,7 +24,7 @@ router.post('/owner', async (req, res, next) => {
 });
 
 
-router.put('./owner/:id', async (req, res, next) => {
+router.put('/owner/:id', async (req, res, next) => {
   await ownerModel.update(req.body, { where: {id: req.params.id} });
 
   const updateOwner = await ownerModel.findByPk(req.params.id);
@@ -32,9 +32,9 @@ router.put('./owner/:id', async (req, res, next) => {
 });
 
 
-router.delete('./owner/:id', async (req, res, next) => {
+router.delete('/owner/:id', async (req, res, next) => {
   try {
-    const deletedOwner = await ownerModel.destroy ({ where: { id: req.params.id} });
+    const deletedOwner = await ownerModel.destroy(req.params.id);
     res.status(200).send(deletedOwner);
   } catch (err) {
     next(err);

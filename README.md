@@ -44,7 +44,7 @@ to run tests, after running `npm i`, run the command `npm test`
 #### PR
 
 [PR 1(basic-api)](https://github.com/triciasawyer/api-server/pull/1)
-[PR 2()]()
+[PR 2(modeling)](https://github.com/triciasawyer/api-server/pull/3)
 
 #### UML
 

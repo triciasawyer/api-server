@@ -19,7 +19,7 @@ afterAll(async() => {
 
 describe('Pet route', () => {
   test('create a pet', async() => {
-    let response = await request.post('./pet').send ({
+    let response = await request.post('/pet').send ({
       name: 'Test',
       age: 6,
       type: 'dog',
@@ -32,7 +32,7 @@ describe('Pet route', () => {
 
 
   test('get one pet route', async() => {
-    let response = await request.get('./pet/1');
+    let response = await request.get('/pet/1');
 
     expect(response.status).toEqual(200);
     expect(response.body[0].name).toEqual('Test');
@@ -41,19 +41,21 @@ describe('Pet route', () => {
 
 
   test('gets all pets', async() => {
-    let response = await request.get('./pet');
+    let response = await request.get('/pet');
 
     expect(response.status).toEqual(200);
     expect(response.body[0].name).toEqual('Test');
     expect(response.body[0].age).toEqual(6);
+  });
+
+
+  test('update pet route', async () => {
+    const response = await request.put('/pet/1');
+    // console.log(response.body);
+    expect(response.status).toEqual(200);
+    expect(response.body.name).toEqual('Test');
+    expect(response.body.age).toEqual(6);
   });
 
   
-  test('update pet route', async () => {
-    const response = await request.put('/pet/1').send({ name: 'Test' });
-    // console.log(response.body);
-    expect(response.status).toEqual(200);
-    expect(response.body[0].name).toEqual('Test');
-    expect(response.body[0].age).toEqual(6);
-  });
 });

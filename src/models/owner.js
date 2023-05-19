@@ -2,7 +2,7 @@
 
 
 const owner = (sequelizeDb, DataTypes) => {
-  return sequelizeDb.define('owner', {
+  return sequelizeDb.define('owners', {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
