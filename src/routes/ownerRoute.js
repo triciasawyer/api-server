@@ -36,7 +36,7 @@ router.delete('/owner/:id', async (req, res, next) => {
   const id = parseInt(req.params.id);
 
   try {
-    let deletedOwnerResponse = await ownerModel.findByPk(req.params.id);
+    let deletedOwnerResponse = await ownerModel.findByPk(id);
 
     await ownerModel.destroy({where: {id}});
     res.status(200).json(deletedOwnerResponse);
