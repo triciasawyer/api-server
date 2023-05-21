@@ -3,8 +3,7 @@
 
 const express = require('express');
 const router = express.Router();
-const { ownerModel } = require('../models');
-
+const { ownerModel, petModel } = require('../models');
 
 router.get('/owner', async (req, res, next) => {
   let owners = await ownerModel.findAll();
@@ -12,8 +11,24 @@ router.get('/owner', async (req, res, next) => {
 });
 
 
+router.get('/ownerWithPets', async (req, res, next) => {
+  let owners = await ownerModel.findAll({include: {model: petModel}});
+  res.status(200).send(owners);
+});
+
+
+router.get('/ownerWithSinglePet/:id', async (req, res, next) => {
+  let owners = await ownerModel.findAll({
+    include: {model: petModel},
+    where: {id: req.params.id},
+  });
+
+  res.status(200).send(owners);
+});
+
+
 router.get('/owner/:id', async (req, res, next) => {
-  let singleOwner = await ownerModel.findAll({where: { id: req.params.id}});
+  let singleOwner = await ownerModel.findAll({where: {id: req.params.id}});
   res.status(200).send(singleOwner);
 });
 
@@ -36,10 +51,9 @@ router.delete('/owner/:id', async (req, res, next) => {
   const id = parseInt(req.params.id);
 
   try {
-    let deletedOwnerResponse = await ownerModel.findByPk(id);
-
+    let deletedOwner = await ownerModel.findByPk(id);
     await ownerModel.destroy({where: {id}});
-    res.status(200).json(deletedOwnerResponse);
+    res.status(200).json(deletedOwner);
   } catch (err) {
     next(err);
   }

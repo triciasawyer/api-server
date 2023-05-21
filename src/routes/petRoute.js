@@ -3,31 +3,32 @@
 
 const express = require('express');
 const router = express.Router();
-const { petModel } = require('../models');
+const { pet } = require('../models');
 
 
 router.get('/pet', async (req, res, next) => {
-  let pets = await petModel.findAll();
+  let pets = await pet.read();
   res.status(200).send(pets);
 });
 
+
 router.get('/pet/:id', async (req, res, next) => {
-  let singlePet = await petModel.findAll({where: {id:req.params.id}});
+  let singlePet = await pet.read(req.params.id);
   res.status(200).send(singlePet);
 });
 
 
 router.post('/pet', async (req, res, next) => {
-  let newPet = await petModel.create(req.body);
+  let newPet = await pet.create(req.body);
   res.status(200).send(newPet);
 });
 
 
 router.put('/pet/:id', async (req, res, next) => {
-  await petModel.update(req.body, { where: {id: req.params.id} });
+  await pet.update(req.body, { where: {id: req.params.id} });
 
-  const updatePet = await petModel.findByPk(req.params.id);
-  res.status(200).send(updatePet);
+  const updatedPet = await pet.findByPk(req.params.id);
+  res.status(200).send(updatedPet);
 });
 
 
@@ -35,10 +36,9 @@ router.delete('/pet/:id', async (req, res, next) => {
   const id = parseInt(req.params.id);
 
   try {
-    let deletedPetResponse = await petModel.findByPk(req.params.id);
-
-    await petModel.destroy({where: {id}});
-    res.status(200).json(deletedPetResponse);
+    let deletedPet = await pet.findByPk(req.params.id);
+    await pet.destroy({where: {id}});
+    res.status(200).json(deletedPet);
   } catch (err) {
     next(err);
   }
