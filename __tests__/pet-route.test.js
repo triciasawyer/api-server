@@ -33,10 +33,10 @@ describe('Pet route', () => {
 
   test('get one pet route', async() => {
     let response = await request.get('/pet/1');
-
+    console.log('++++++++++++++++++', response.body);
     expect(response.status).toEqual(200);
-    expect(response.body[0].name).toEqual('Test');
-    expect(response.body[0].age).toEqual(6);
+    expect(response.body.name).toEqual('Test');
+    expect(response.body.age).toEqual(6);
   });
 
 

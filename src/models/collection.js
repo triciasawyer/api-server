@@ -22,7 +22,7 @@ class Collection {
   async read(id = null) {
     try {
       if (id) {
-        const singleRecord = await this.model.findByPk(id);
+        const singleRecord = await this.model.findByPk({ where: {id} });
         return singleRecord;
       } else {
         const allRecords = await this.model.findAll();

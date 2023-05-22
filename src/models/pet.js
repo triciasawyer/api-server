@@ -2,7 +2,7 @@
 
 
 const pet = (sequelizeDb, DataTypes) => {
-  return sequelizeDb.define('pets', {
+  return sequelizeDb.define('pet', {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
