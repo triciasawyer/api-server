@@ -10,9 +10,9 @@ Create a simple rest api with a sql database and express server
 
 ### Links and Resources
 
-- [GitHub Actions ci/cd](https://github.com/triciasawyer/basic-express-server/actions)
-- [back-end dev server url](https://basic-express-server-dev-4sx4.onrender.com)
-- [back-end prod server url](https://basic-express-server-prod-jtnf.onrender.com)
+- [GitHub Actions ci/cd]
+- [back-end dev server url]
+- [back-end prod server url]
 
 ### Collaborators
 
