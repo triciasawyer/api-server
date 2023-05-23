@@ -1,4 +1,4 @@
-# LAB- Class 2
+# LAB- Class 4
 
 ## Project: api server
 
@@ -6,7 +6,7 @@
 
 ### Problem Domain
 
-Creating
+Create a simple rest api with a sql database and express server
 
 ### Links and Resources
 
