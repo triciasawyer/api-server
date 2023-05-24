@@ -50,20 +50,24 @@ describe('Owner route', () => {
 
 
   test('update owner route', async () => {
-    const response = await request.put('/owner/1');
+    const response = await request.put('/owner/1').send ({
+      name: 'Updated test',
+      age: 45,
+      location: 'texas',
+    });
 
     expect(response.status).toEqual(200);
-    expect(response.body.name).toEqual('Test');
-    expect(response.body.age).toEqual(25);
+    expect(response.body.name).toEqual('Updated test');
+    expect(response.body.age).toEqual(45);
   });
 
 
   test('Delete an owner', async () => {
-    const response = await request.get('/owner/1');
+    const response = await request.delete('/owner/1');
 
     expect(response.status).toEqual(200);
-    expect(response.body[0].name).toEqual('Test');
-    expect(response.body[0].age).toEqual(25);
+    expect(response.body.name).toEqual('Updated test');
+    expect(response.body.age).toEqual(45);
   });
 
 

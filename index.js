@@ -14,4 +14,3 @@ sequelizeDb.sync()
     start(PORT);
   })
   .catch(err => console.error(err));
-

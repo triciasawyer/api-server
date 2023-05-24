@@ -1,4 +1,4 @@
-# LAB- Class 2
+# LAB- Class 4
 
 ## Project: api server
 
@@ -6,15 +6,17 @@
 
 ### Problem Domain
 
-Creating
+Create a simple rest api with a sql database and express server
 
 ### Links and Resources
 
-- [GitHub Actions ci/cd](https://github.com/triciasawyer/basic-express-server/actions)
-- [back-end dev server url](https://basic-express-server-dev-4sx4.onrender.com)
-- [back-end prod server url](https://basic-express-server-prod-jtnf.onrender.com)
+- [GitHub Actions ci/cd]
+- [back-end dev server url]
+- [back-end prod server url]
 
 ### Collaborators
+
+Got help from a TA, Tony in lab 3
 
 ### Setup
 
@@ -54,3 +56,11 @@ to run tests, after running `npm i`, run the command `npm test`
 #### UML
 
 ![UML](./assets/UML3.png)
+![Lab 4](./Lab4-UML.png)
+
+### code review process
+
+My partner was Ethan, and my key takeaway was that I do know how to read code, I am getting better at reading other peoples code too and today was that realization of where I am at with my understanding, and noticing that I am growing.
+
+[My PR:](https://github.com/triciasawyer/api-server-ethanStorm/pull/1)
+[Ethan's PR:](https://github.com/triciasawyer/api-server/pull/2)

@@ -21,4 +21,3 @@ const pet = (sequelizeDb, DataTypes) => {
 
 
 module.exports = pet;
-

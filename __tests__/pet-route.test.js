@@ -33,10 +33,10 @@ describe('Pet route', () => {
 
   test('get one pet route', async() => {
     let response = await request.get('/pet/1');
-
+    console.log('++++++++++++++++++', response.body);
     expect(response.status).toEqual(200);
-    expect(response.body[0].name).toEqual('Test');
-    expect(response.body[0].age).toEqual(6);
+    expect(response.body.name).toEqual('Test');
+    expect(response.body.age).toEqual(6);
   });
 
 
@@ -50,20 +50,25 @@ describe('Pet route', () => {
 
 
   test('update pet route', async () => {
-    const response = await request.put('/pet/1');
-    // console.log(response.body);
+    const response = await request.put('/pet/1').send ({
+      name: 'Updated test',
+      age: 8,
+      type: 'cat',
+
+    });
+
     expect(response.status).toEqual(200);
-    expect(response.body.name).toEqual('Test');
-    expect(response.body.age).toEqual(6);
+    expect(response.body.name).toEqual('Updated test');
+    expect(response.body.age).toEqual(8);
   });
 
 
   test('Delete a pet', async () => {
-    const response = await request.get('/pet/1');
+    const response = await request.delete('/pet/1');
 
     expect(response.status).toEqual(200);
-    expect(response.body[0].name).toEqual('Test');
-    expect(response.body[0].age).toEqual(6);
+    expect(response.body.name).toEqual('Updated test');
+    expect(response.body.age).toEqual(8);
   });
 
 
