@@ -33,9 +33,8 @@ DELETE : /owner/:id
 
 ### Links and Resources
 
-- [GitHub Actions ci/cd]
-- [back-end dev server url]
-- [back-end prod server url]
+- [GitHub Actions](https://github.com/triciasawyer/api-server/actions)
+- [API server prod](https://api-server-prod-3588.onrender.com)
 
 ### UML
 
