@@ -8,40 +8,43 @@ Create a simple rest api with a sql database and express server
 
 ### Initializing and Running the Application
 
-- Clone repo down
-- run `npm install`
-- run `nodemon`
-- run the command `npm test`
+To get started with the API server, follow these steps:
+
+- Clone this repository to your local machine.
+- Run `npm install` to install the project's dependencies.
+- Start the server using `nodemon` to automatically restart it on code changes.
+- Execute the command `npm test` to run the project's tests.
 
 ### Routes
 
-404 bad route : /foo
-GET : /pet
-GET : /pet/:id
-GET : /owner
-GET : /owner/:id
-POST : /pet
-POST : /owner
-PUT : /owner/:id
-PUT : /pet/:id
-DELETE : /owner/:id
-DELETE : /owner/:id
+The API server provides the following routes for interacting with the database:
+
+- 404 bad route: `/foo`
+- GET: `/pet`
+- GET: `/pet/:id`
+- GET: `/owner`
+- GET: `/owner/:id`
+- POST: `/pet`
+- POST: `/owner`
+- PUT: `/owner/:id`
+- PUT: `/pet/:id`
+- DELETE: `/owner/:id`
 
 ### Deployed version
 
-[Render deploy](https://api-server-prod-3588.onrender.com)
+Check out the deployed version of the API server at [Render deploy](https://api-server-prod-3588.onrender.com). It's accessible in a live environment for testing and integration purposes.
 
 ### Links and Resources
 
-- [GitHub Actions](https://github.com/triciasawyer/api-server/actions)
-- [API server prod](https://api-server-prod-3588.onrender.com)
+- Github Actions: [View Actions:](https://github.com/triciasawyer/api-server/actions)
+- Deployed API Server: [Access API Server Prod](https://api-server-prod-3588.onrender.com)
 
-### UML
+### UML Diagrams
 
-![Phase 1](./assets/phase1.png)
-![Phase 2](./assets/phase2.png)
+![Phase 1 UML Diagram](./assets/phase1.png)
+![Phase 2 UML Diagram](./assets/phase2.png)
 
-### PR links
+### Pull Request links
 
-[My PR:](https://github.com/triciasawyer/api-server-ethanStorm/pull/1)
-[Ethan's PR:](https://github.com/triciasawyer/api-server/pull/2)
+[My Pull Request](https://github.com/triciasawyer/api-server-ethanStorm/pull/1)
+[Ethan's Pull Request](https://github.com/triciasawyer/api-server/pull/2)
