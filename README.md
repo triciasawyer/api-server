@@ -29,6 +29,7 @@ The API server provides the following routes for interacting with the database:
 - PUT: `/owner/:id`
 - PUT: `/pet/:id`
 - DELETE: `/owner/:id`
+- DELETE: `/pet/:id`
 
 ### Deployed version
 
