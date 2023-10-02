@@ -1,32 +1,19 @@
-# LAB- Class 4
+# API server
 
-## Project: api server
-
-### Author: Tricia Sawyer
+## Author: Tricia Sawyer
 
 ### Problem Domain
 
 Create a simple rest api with a sql database and express server
 
-### Links and Resources
+### Initializing and Running the Application
 
-- [GitHub Actions ci/cd]
-- [back-end dev server url]
-- [back-end prod server url]
+- Clone repo down
+- run `npm install`
+- run `nodemon`
+- run the command `npm test`
 
-### Collaborators
-
-Got help from a TA, Tony in lab 3
-
-### Setup
-
-.env requirements (where applicable)
-port variable exists within the env sample
-
-How to initialize/run your application (where applicable)
-clone repo, npm i, then run nodemon in the terminal
-
-#### Routes
+### Routes
 
 404 bad route : /foo
 GET : /pet
@@ -40,27 +27,22 @@ PUT : /pet/:id
 DELETE : /owner/:id
 DELETE : /owner/:id
 
-#### Tests
-
-to run tests, after running `npm i`, run the command `npm test`
-
-#### Deployed version
+### Deployed version
 
 [Render deploy](https://api-server-prod-3588.onrender.com)
 
-#### PR
+### Links and Resources
 
-[PR 1(basic-api)](https://github.com/triciasawyer/api-server/pull/1)
-[PR 2(modeling)](https://github.com/triciasawyer/api-server/pull/3)
+- [GitHub Actions ci/cd]
+- [back-end dev server url]
+- [back-end prod server url]
 
-#### UML
+### UML
 
-![UML](./assets/UML3.png)
-![Lab 4](./Lab4-UML.png)
+![Phase 1](./assets/phase1.png)
+![Phase 2](./assets/phase2.png)
 
-### code review process
-
-My partner was Ethan, and my key takeaway was that I do know how to read code, I am getting better at reading other peoples code too and today was that realization of where I am at with my understanding, and noticing that I am growing.
+### PR links
 
 [My PR:](https://github.com/triciasawyer/api-server-ethanStorm/pull/1)
 [Ethan's PR:](https://github.com/triciasawyer/api-server/pull/2)
