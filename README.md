@@ -14,9 +14,7 @@ To get started with the API server, follow these steps:
 - Run `npm install` to install the project's dependencies.
 - Before running the server, make sure to set the following environment variables:
 
-`PORT=`
-
-`DATABASE_URL=`
+`PORT` and `DATABASE_URL`
 
 - Start the server using `nodemon` to automatically restart it on code changes.
 - Execute the command `npm test` to run the project's tests.
