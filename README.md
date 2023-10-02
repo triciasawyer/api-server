@@ -4,7 +4,7 @@
 
 ### Problem Domain
 
-Create a simple rest api with a sql database and express server
+This project involves creating a straightforward REST API with a SQL database and an Express server. It serves as a foundation for building robust web applications that require backend services.
 
 ### Initializing and Running the Application
 
